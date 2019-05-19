@@ -1,0 +1,5 @@
+F:\Estudos MVC\MVC_Authentication\DemoAuthentication.Application\bin\Debug\DemoAuthentication.Application.dll
+F:\Estudos MVC\MVC_Authentication\DemoAuthentication.Application\bin\Debug\DemoAuthentication.Application.pdb
+F:\Estudos MVC\MVC_Authentication\DemoAuthentication.Application\obj\Debug\DemoAuthentication.Application.csproj.CoreCompileInputs.cache
+F:\Estudos MVC\MVC_Authentication\DemoAuthentication.Application\obj\Debug\DemoAuthentication.Application.dll
+F:\Estudos MVC\MVC_Authentication\DemoAuthentication.Application\obj\Debug\DemoAuthentication.Application.pdb

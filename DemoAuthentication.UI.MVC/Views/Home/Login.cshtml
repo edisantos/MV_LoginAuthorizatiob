@@ -1,0 +1,60 @@
+﻿@model DemoAuthentication.Application.ViewModels._Login
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="container">
+    
+    <br /><br />
+    <div class="panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Login</h3>
+        </div>
+        <div class="panel-body">
+           
+           @using (Html.BeginForm())
+           {
+               @Html.AntiForgeryToken()
+            <div class="form-horizontal">
+                @Html.ValidationSummary()
+                <div class="form-group">
+                    <label>Usuário</label>
+                    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control",autofocus="" })
+                   
+                </div>
+                <div class="form-group">
+                    <label>Senha</label>
+                    @Html.PasswordFor(m => m.Senha, new { @class = "form-control" })
+                    
+                </div>
+                <table class="table">
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-log-in">                  Login</span>
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+                            <a class="btn btn-warning" href="@Url.Action("Index","Home")">Cancelar</a>
+                        </td>
+
+                    </tr>
+                </table>
+               
+                
+                <div class="form-group form-check">
+
+                    <div class="col-sm-10">
+                        @Html.CheckBoxFor(m => m.PermanecerLogado, new { @class = "form-check-input" })
+                        <label for="PermanecerLogado"> Permanecer conectado</label>
+                    </div>
+
+                </div>
+            </div>
+           }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+﻿@model DemoAuthentication.Application.ViewModels.Usuario
+   
+    ViewBag.Title = "Registro";
+}
+
+<div class="container">
+    <div class="panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title">
+                <label>Registro de Usuário</label>
+            </div>
+        </div>
+        <div class="panel-body">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label>Nome</label>
+                    @Html.TextBoxFor(m => m.Nome, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label>E-mail</label>
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label>Usuario</label>
+                    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label>Senha</label>
+                    @Html.PasswordFor(m => m.Senha, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-save"> Registrar</span>
+                    </button>
+                </div>
+            </div>
+            }
+        </div>
+        <div class="panel-footer">
+
+        </div>
+    </div>
+</div>
+
